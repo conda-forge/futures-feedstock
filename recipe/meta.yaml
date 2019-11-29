@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [py>=32]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 1
+  script: "{{ PYTHON }} --version"  # [py>=32]
+  script: "{{ PYTHON }} -m pip install . -vv"  # [py==27]
 
 requirements:
   host:
