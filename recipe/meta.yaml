@@ -1,6 +1,6 @@
 {% set name = "futures" %}
-{% set version = "3.3.0" %}
-{% set sha256 = "7e033af76a5e35f58e56da7a91e687706faf4e7bdfb2cbc3f2cca6b9bcda9794" %}
+{% set version = "3.4.0" %}
+{% set sha256 = "3ec8ceecd1b85547aa7539c1db8d6b2a6245405de427e4780809b6f56a18fdd2" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py>=32]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
